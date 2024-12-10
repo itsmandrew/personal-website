@@ -26,7 +26,12 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className}`}
+        style={{ backgroundColor: "#252b3b", color: "#1eff00" }}
+      >
+        {children}
+      </body>
     </html>
   );
 }
