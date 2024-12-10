@@ -1,5 +1,6 @@
 "use client";
 
+import styles from "./Hero.module.css";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
@@ -24,10 +25,10 @@ export default function Hero() {
 
   return (
     <div
-      className="container-fluid d-flex align-items-center justify-content-center font-mono"
+      className={`d-flex align-items-center justify-content-center font-mono`}
       style={{ minHeight: "100vh" }}
     >
-      <div className="element0">
+      <div className={`${styles.element0}`}>
         <span ref={el}></span>
       </div>
     </div>

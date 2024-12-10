@@ -10,14 +10,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: Monaco, Consolas, "Lucida Console", monospace;
-  background-color: #252b3b;
-  color: #1eff00;
-}
-
 .purple {
   color: #e100ff;
 }
@@ -48,34 +40,6 @@ a:hover {
   color: white;
   text-decoration: none;
   text-shadow: 0 0 5px #ff001e, 0 0 10px #ff001e, 0 0 15px #ff001e;
-}
-
-/* Hero Section */
-@media (min-width: 768px) and (max-width: 991px) {
-  .element0 {
-    font-size: 1.3rem;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .element0 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .element0 {
-    font-size: 2rem;
-  }
-}
-
-.half {
-  width: 50%;
-  min-width: 400px;
-}
-
-.type1 {
-  white-space: pre-wrap;
 }
 
 /* About */

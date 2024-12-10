@@ -1,0 +1,30 @@
+/* Hero Section */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .element0 {
+    font-size: 1.3rem;
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .element0 {
+    font-size: 1.5rem;
+    background-color: blue;
+  }
+}
+
+@media (min-width: 1200px) {
+  .element0 {
+    font-size: 2rem;
+  }
+}
+
+.half {
+  width: 50%;
+  min-width: 400px;
+}
+
+.type1 {
+  white-space: pre-wrap;
+}
