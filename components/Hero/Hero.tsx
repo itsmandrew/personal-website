@@ -10,7 +10,7 @@ export default function Hero() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        'changa17@uci.edu ~$ npm install^1000\ninstalling dependencies...^1000\nFetching from source...^1000\n> Hello, this is Andrew :D \n<span style="display: inline-block;"><a href="#about" class="purple">about</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#experience" class="purple">experience</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#contact" class="purple">contact</a></span>',
+        `changa17@uci.edu ~$ npm install^1000\ninstalling dependencies...^1000\nFetching from source...^1000\n> Hello, this is Andrew :D \n<span class="${styles.navLinks}"><a href="#about" class="purple">about</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#experience" class="purple">experience</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#contact" class="purple">contact</a></span>`,
       ],
       typeSpeed: 30,
       backDelay: 750,
