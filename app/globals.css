@@ -27,13 +27,25 @@ html {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-a:hover {
-  color: #e100ff;
-  text-decoration: none;
+a:hover,
+a:focus,
+a:active {
+  color: #e100ff !important;
+  text-decoration: none !important;
   text-shadow: 0 0 5px #e100ff, 0 0 10px #e100ff, 0 0 15px #e100ff;
+}
+
+/* Remove any bootstrap-related underlines */
+a:focus,
+a:active {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .red a:hover {
@@ -165,4 +177,10 @@ a:hover {
   color: #000000;
   text-decoration: none;
   text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+}
+
+/* Add this to your existing styles */
+.nav-links {
+  display: block;
+  margin-top: 1.5rem;
 }

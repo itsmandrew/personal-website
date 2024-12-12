@@ -1,22 +1,35 @@
 /* Hero Section */
 
+.element0 {
+  line-height: 1.5;
+  white-space: pre;
+  display: inline-block;
+  min-width: 600px;
+  width: 600px;
+  position: relative;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .element0 {
     font-size: 1.3rem;
-    width: auto;
+    min-width: 500px;
+    width: 500px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .element0 {
-    font-size: 1.5rem;
-    background-color: blue;
+    font-size: 1.6rem;
+    min-width: 550px;
+    width: 550px;
   }
 }
 
 @media (min-width: 1200px) {
   .element0 {
     font-size: 2rem;
+    min-width: 600px;
+    width: 600px;
   }
 }
 
@@ -27,4 +40,12 @@
 
 .type1 {
   white-space: pre-wrap;
+}
+
+.cursorWrapper :global(.typed-cursor) {
+  display: inline !important;
+  position: relative !important;
+  margin-left: 2px !important;
+  vertical-align: baseline !important;
+  line-height: normal !important;
 }

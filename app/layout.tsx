@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Andrew's World",
@@ -25,10 +22,17 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body
-        className={`${inter.className}`}
-        style={{ backgroundColor: "#252b3b", color: "#1eff00" }}
+        style={{
+          backgroundColor: "#252b3b",
+          color: "#1eff00",
+          fontFamily: "'JetBrains Mono', monospace",
+        }}
       >
         {children}
       </body>

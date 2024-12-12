@@ -10,12 +10,14 @@ export default function Hero() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        'npm install^1000 <br>`installing dependencies...` ^1000 <br>`Fetching from source...` <br>> Hello, this is Andrew :D <br><br><a href="#about" class="purple">about</a>\t <a href="#experience" class="purple">experience</a>\t <a href="#contact" class="purple">contact</a>',
+        'changa17@uci.edu ~$ npm install^1000\ninstalling dependencies...^1000\nFetching from source...^1000\n> Hello, this is Andrew :D \n<span style="display: inline-block;"><a href="#about" class="purple">about</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#experience" class="purple">experience</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#contact" class="purple">contact</a></span>',
       ],
       typeSpeed: 30,
       backDelay: 750,
       loop: false,
       loopCount: Infinity,
+      showCursor: true,
+      cursorChar: "█",
     });
 
     return () => {
@@ -28,7 +30,7 @@ export default function Hero() {
       className={`d-flex align-items-center justify-content-center font-mono`}
       style={{ minHeight: "100vh" }}
     >
-      <div className={`${styles.element0}`}>
+      <div className={`${styles.element0} ${styles.cursorWrapper}`}>
         <span ref={el}></span>
       </div>
     </div>
