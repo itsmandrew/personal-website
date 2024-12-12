@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { JetBrains_Mono, Inter } from "next/font/google";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jetbrains",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Andrew's World",
@@ -12,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${jetbrainsMono.variable} ${inter.variable}`}>
       <head>
         <link
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -22,16 +37,12 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body
         style={{
           backgroundColor: "#252b3b",
           color: "#1eff00",
-          fontFamily: "'JetBrains Mono', monospace",
+          fontFamily: "var(--font-jetbrains)",
         }}
       >
         {children}

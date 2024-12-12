@@ -18,6 +18,13 @@ export default function Hero() {
       loopCount: Infinity,
       showCursor: true,
       cursorChar: "█",
+      onComplete: () => {
+        const cursor = document.querySelector(".typed-cursor");
+        if (cursor) {
+          cursor.textContent = "▏";
+          cursor.classList.add(styles.smallCursor);
+        }
+      },
     });
 
     return () => {
