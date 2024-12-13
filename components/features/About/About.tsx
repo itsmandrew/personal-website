@@ -92,32 +92,37 @@ export default function About() {
           <div className={`${styles.half} ${styles.hidden2}`}>
             <div className={styles.infoContainer}>
               <h3>Who am I?</h3>
-              <ul>
-                <li>
-                  My name is <strong>Andrew Chang</strong>
-                </li>
-                <li>
-                  I&apos;m currently a 4th year Computer Science student at UCI
-                </li>
-                <li>I&apos;m from Diamond Bar, CA and was born in SoCal</li>
-              </ul>
-            </div>
-            <div className={styles.infoContainer}>
-              <h3>What are my skills?</h3>
-              <ul>
-                <li>Python, TypeScript, FastAPI, Next.js, React</li>
-                <li>
-                  Full stack development, AI engineering, data engineering
-                </li>
-                <li>I love BUILDING</li>
-              </ul>
+              <p>
+                * My name is <strong>Andrew Chang</strong> and I&apos;m
+                currently a senior at the University of California, Irvine
+                pursuing a B.S. in Computer Science. I love building things and
+                learning new technologies and have an interest in software
+                engineering and data infrastructure.
+              </p>
             </div>
             <div className={styles.infoContainer}>
               <h3>What are my hobbies?</h3>
               <ul>
-                <li>Watching basketball</li>
-                <li>Gyming</li>
-                <li>Dj-ing</li>
+                <li>Watching basketball 🏀</li>
+                <li>Gyming and exercise 🏋🏼🏃🏻‍♂️</li>
+                <li>Dj-ing and listening to music 🎧</li>
+              </ul>
+            </div>
+            <div className={styles.infoContainer}>
+              <h3>Tech Stack</h3>
+              <ul>
+                <li>
+                  <strong>Languages</strong>: Python, TypeScript, Java, Rust,
+                  HTML/CSS, SQL
+                </li>
+                <li>
+                  <strong>Frameworks</strong>: React, Next.js, Django, FastAPI,
+                  Node.js, Express
+                </li>
+                <li>
+                  <strong>Tools</strong>: Git, Docker, Linux, AWS, GCP,
+                  Kubernetes
+                </li>
               </ul>
             </div>
             <br />
