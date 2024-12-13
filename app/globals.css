@@ -49,9 +49,8 @@ a:active {
 
 /* About */
 .about-image {
-  max-width: 30vw;
-  width: 30vw;
-  min-width: 100px;
+  max-width: 300px;
+  width: 100%;
   height: auto;
   border-radius: 25px;
 }
@@ -124,23 +123,22 @@ a:active {
 /* Animation Section For Sliding */
 .hidden,
 .hidden2 {
-  will-change: transform, opacity;
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
 }
 
 .hidden {
-  opacity: 0;
-  transform: translateX(-40%);
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  transform: translateX(-100%);
 }
 
 .hidden2 {
-  opacity: 0;
-  transform: translateX(20%);
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  transform: translateX(100%);
 }
 
 .show {
   opacity: 1;
+  filter: blur(0);
   transform: translateX(0);
 }
 
@@ -176,4 +174,40 @@ a:active {
 .nav-links {
   display: block;
   margin-top: 1.5rem;
+}
+
+/* Add responsive layout for the content section */
+#content {
+  width: 100%;
+  padding: 20px;
+}
+
+.half {
+  width: 50%;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .half {
+    width: 100%;
+  }
+}
+
+/* Add some spacing between sections */
+.container-fluid {
+  padding: 2rem 0;
+}
+
+/* Make text more visible */
+ul {
+  color: white;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Improve container styling */
+.container {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: 15px;
 }
