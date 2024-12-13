@@ -1,0 +1,112 @@
+/* Title responsiveness */
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Content styling */
+.content {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.content ul {
+  list-style-type: disc;
+  font-size: small;
+  padding-left: 20px;
+  margin-bottom: 1em;
+  margin-left: 5px;
+  --tw-text-opacity: 1;
+  color: rgb(220 220 220 / var(--tw-text-opacity));
+}
+
+.content ul li {
+  margin-bottom: 4px;
+}
+
+/* Timeline styling */
+.timeline {
+  position: relative;
+  list-style: none;
+  margin-left: 40px;
+  padding-left: 30px;
+}
+
+/* Create a pseudo-element for the animated line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0; /* Start with 0 height */
+  width: 2px;
+  background-color: hsl(0, 0%, 90%);
+  transition: height 1.5s ease-out;
+}
+
+.timeline.animate::before {
+  height: 100%; /* Animate to full height */
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 15px;
+}
+
+.timelineItem:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timelineIcon {
+  position: absolute;
+  left: -49px;
+  background-color: white;
+  color: hsl(217, 88.8%, 35.1%);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Text colors */
+.textSecondary {
+  color: rgb(255, 255, 255);
+}
+
+/* Company name and date styles */
+.companyName {
+  font-size: small;
+  color: white;
+  opacity: 0.4;
+}
+
+.date {
+  font-size: x-small;
+  font-weight: bold;
+  color: white;
+  opacity: 0.6;
+}
+
+/* Job title style */
+.jobTitle {
+  color: white;
+  font-weight: bold;
+}
+
+/* Add media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .timeline {
+    margin-left: 30px;
+    padding-left: 20px;
+  }
+
+  .timelineIcon {
+    left: -41px;
+  }
+}
