@@ -10,6 +10,11 @@ export default function About() {
   const el = useRef(null);
 
   useEffect(() => {
+    // Remove hash from URL on page load/refresh
+    if (window.location.hash === "#about") {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+
     const typed = new Typed(el.current, {
       strings: ["life", "skills", "hobbies"],
       typeSpeed: 80,

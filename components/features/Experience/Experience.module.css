@@ -9,6 +9,8 @@
 .content {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .content ul {
@@ -19,6 +21,7 @@
   margin-left: 5px;
   --tw-text-opacity: 1;
   color: rgb(220 220 220 / var(--tw-text-opacity));
+  word-wrap: break-word;
 }
 
 .content ul li {

@@ -10,6 +10,11 @@ export default function Experience() {
   const el = useRef(null);
 
   useEffect(() => {
+    // Remove hash from URL on page load/refresh
+    if (window.location.hash === "#experience") {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+
     const typed = new Typed(el.current, {
       strings: ["experience", "journey", "story"],
       typeSpeed: 80,
@@ -151,17 +156,18 @@ export default function Experience() {
       {/* Spacing */}
       <div
         className="container-fluid d-flex flex-column"
-        style={{ minHeight: "50vh" }}
+        style={{ minHeight: "50vh", overflowX: "hidden" }}
       ></div>
       <div
         id="experience"
         className="container-fluid d-flex flex-column text-center"
+        style={{ overflowX: "hidden" }}
       >
         <p className="display-4 pb-3" style={{ marginBottom: "20px" }}>
           About my <span ref={el} className="red"></span>
         </p>
       </div>
-      <div className="container px-4">
+      <div className="container px-4" style={{ overflowX: "hidden" }}>
         <section className="py-5">
           <ul ref={timelineRef} className={styles.timeline}>
             {experiences.map((exp, index) => (
