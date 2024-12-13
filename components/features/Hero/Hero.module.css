@@ -4,9 +4,11 @@
   line-height: 1.5;
   white-space: pre;
   display: inline-block;
-  min-width: 600px;
-  width: 600px;
   position: relative;
+  max-width: 600px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: left;
 }
 
 .navLinks {
@@ -14,27 +16,44 @@
   margin-top: 2rem;
 }
 
+@media (max-width: 767px) {
+  .element0 {
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    padding: 0 15px;
+  }
+
+  .navLinks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    white-space: nowrap;
+  }
+
+  .navLinks a {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .element0 {
     font-size: 1.3rem;
-    min-width: 500px;
-    width: 500px;
+    max-width: 500px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .element0 {
     font-size: 1.6rem;
-    min-width: 550px;
-    width: 550px;
+    max-width: 550px;
   }
 }
 
 @media (min-width: 1200px) {
   .element0 {
     font-size: 2rem;
-    min-width: 600px;
-    width: 600px;
+    max-width: 600px;
   }
 }
 
