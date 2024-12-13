@@ -54,7 +54,7 @@ export default function About() {
         style={{ minHeight: "100vh" }}
       >
         <div className="container-fluid d-flex flex-column text-center">
-          <p className="display-4 pb-3" style={{ marginBottom: "50px" }}>
+          <p className="display-4 pb-3" style={{ marginBottom: "0px" }}>
             About my <span ref={el} className="red"></span>
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function About() {
           className={`d-flex flex-wrap flex-row align-items-center justify-content-center ${styles.content}`}
         >
           <div
-            className={`d-flex flex-column align-items-center justify-content-center ${styles.half} red ${styles.hidden}`}
+            className={`d-flex flex-column align-items-center justify-content-center ${styles.half} ${styles.hidden}`}
           >
             <Image
               src="/profile_pic.jpg"
@@ -71,15 +71,16 @@ export default function About() {
               height={400}
               className={styles.aboutImage}
               alt="me being hella sexy"
+              priority
             />
             <div
-              className="d-flex flex-row align-items-center"
-              style={{ paddingTop: "3vh", paddingBottom: "3vh" }}
+              className="d-flex flex-row align-items-center justify-content-center"
+              style={{ padding: "3vh 0" }}
             >
               <Link
                 href="/static/resume.pdf"
                 style={{
-                  fontSize: "larger",
+                  fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
                   color: "#ff001e",
                 }}
                 className={styles.resumeText}

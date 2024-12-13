@@ -108,14 +108,36 @@
   .half {
     width: 100%;
     max-width: 100%;
+    padding: 10px;
   }
 
-  .profileImage {
+  .aboutImage {
     max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hidden {
+    transform: translateY(-100%);
+  }
+
+  .hidden2 {
+    transform: translateY(100%);
+  }
+
+  .show {
+    transform: translateY(0);
   }
 
   .title {
     font-size: 1.8rem;
+  }
+
+  .infoContainer h3 {
+    font-size: 1.3rem;
+  }
+
+  .infoContainer ul {
+    font-size: 0.95rem;
   }
 }
 
