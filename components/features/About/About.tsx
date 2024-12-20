@@ -8,13 +8,9 @@ import styles from "./About.module.css";
 
 export default function About() {
   const el = useRef(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Remove hash from URL on page load/refresh
-    if (window.location.hash === "#about") {
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-
     const typed = new Typed(el.current, {
       strings: ["life", "skills", "hobbies"],
       typeSpeed: 80,
@@ -54,7 +50,8 @@ export default function About() {
       ></div>
 
       <div
-        id="about"
+        ref={aboutRef}
+        data-section="about"
         className="container-fluid d-flex flex-column"
         style={{ minHeight: "100vh" }}
       >

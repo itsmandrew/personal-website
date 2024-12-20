@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       className={`text-center text-lg-start text-white ${styles.footer}`}
-      id="contact"
+      data-section="contact"
     >
       {/* Grid container */}
       <div className="container p-4 pb-0">

@@ -8,13 +8,9 @@ import styles from "./Experience.module.css";
 export default function Experience() {
   const timelineRef = useRef<HTMLUListElement>(null);
   const el = useRef(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Remove hash from URL on page load/refresh
-    if (window.location.hash === "#experience") {
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-
     const typed = new Typed(el.current, {
       strings: ["experience", "journey", "story"],
       typeSpeed: 80,
@@ -28,13 +24,15 @@ export default function Experience() {
     const timelineObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
             entry.target.classList.add(styles.animate);
+            // Once animated, no need to keep observing
+            timelineObserver.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.1, // Start animation when 10% of the timeline is visible
+        threshold: 0.1,
       }
     );
 
@@ -159,7 +157,8 @@ export default function Experience() {
         style={{ minHeight: "50vh", overflowX: "hidden" }}
       ></div>
       <div
-        id="experience"
+        ref={experienceRef}
+        data-section="experience"
         className="container-fluid d-flex flex-column text-center"
         style={{ overflowX: "hidden" }}
       >
