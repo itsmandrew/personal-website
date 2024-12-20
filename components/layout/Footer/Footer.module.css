@@ -1,0 +1,50 @@
+.footer {
+  background-color: #929fba !important;
+}
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.socialBtnContainer {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.socialBtn {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 2px solid white !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+.socialBtn:hover {
+  background-color: white !important;
+  color: black !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: none !important;
+}
+
+.socialBtn:hover i {
+  color: black !important;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white !important;
+}
+
+.socialBtn:focus,
+.socialBtn:active {
+  color: white !important;
+  text-shadow: none !important;
+}
+
+.socialBtn:hover {
+  color: black !important;
+  text-shadow: none !important;
+}

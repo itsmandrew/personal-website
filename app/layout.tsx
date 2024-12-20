@@ -3,6 +3,7 @@ import "./globals.css";
 import { JetBrains_Mono, Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Footer from "@/components/layout/Footer/Footer";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -43,9 +44,14 @@ export default function RootLayout({
           backgroundColor: "#252b3b",
           color: "#1eff00",
           fontFamily: "var(--font-jetbrains)",
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+          margin: 0,
         }}
       >
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
