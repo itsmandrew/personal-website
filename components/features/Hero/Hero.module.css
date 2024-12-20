@@ -1,14 +1,15 @@
-/* Hero Section */
-
+/* Base styles */
 .element0 {
   line-height: 1.5;
   white-space: pre;
-  display: inline-block;
+  display: block;
   position: relative;
-  max-width: 600px;
   width: 100%;
+  max-width: 600px;
   padding: 0 20px;
   text-align: left;
+  font-size: 2rem;
+  margin: 0 auto;
 }
 
 .navLinks {
@@ -16,23 +17,47 @@
   margin-top: 2rem;
 }
 
+/* Cursor styles */
+.cursorWrapper :global(.typed-cursor) {
+  display: inline;
+  position: relative;
+  margin-left: 2px;
+  vertical-align: baseline;
+  line-height: normal;
+  font-size: 1.5rem;
+}
+
+.cursorWrapper :global(.typed-cursor.smallCursor) {
+  font-size: 0.8rem;
+}
+
+/* Responsive styles */
 @media (max-width: 767px) {
   .element0 {
     font-size: 0.9rem;
     white-space: pre-wrap;
     padding: 0 15px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
   }
 
   .navLinks {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
     white-space: nowrap;
   }
 
   .navLinks a {
     display: inline-block;
     margin: 0;
+  }
+
+  .cursorWrapper :global(.typed-cursor) {
+    font-size: 1rem;
+  }
+
+  .cursorWrapper :global(.typed-cursor.smallCursor) {
+    font-size: 0.5rem;
   }
 }
 
@@ -41,6 +66,14 @@
     font-size: 1.3rem;
     max-width: 500px;
   }
+
+  .cursorWrapper :global(.typed-cursor) {
+    font-size: 1.2rem;
+  }
+
+  .cursorWrapper :global(.typed-cursor.smallCursor) {
+    font-size: 0.6rem;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -48,52 +81,12 @@
     font-size: 1.6rem;
     max-width: 550px;
   }
-}
 
-@media (min-width: 1200px) {
-  .element0 {
-    font-size: 2rem;
-    max-width: 600px;
-  }
-}
-
-.cursorWrapper :global(.typed-cursor) {
-  display: inline !important;
-  position: relative !important;
-  margin-left: 2px !important;
-  vertical-align: baseline !important;
-  line-height: normal !important;
-  font-size: 1.5rem !important;
-}
-
-.cursorWrapper :global(.typed-cursor.smallCursor) {
-  font-size: 0.8rem !important;
-}
-
-/* Adjust cursor size for different screen sizes */
-@media (min-width: 768px) and (max-width: 991px) {
   .cursorWrapper :global(.typed-cursor) {
-    font-size: 1.2rem !important;
+    font-size: 1.3rem;
   }
-  .cursorWrapper :global(.typed-cursor.smallCursor) {
-    font-size: 0.6rem !important;
-  }
-}
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .cursorWrapper :global(.typed-cursor) {
-    font-size: 1.3rem !important;
-  }
   .cursorWrapper :global(.typed-cursor.smallCursor) {
-    font-size: 0.7rem !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .cursorWrapper :global(.typed-cursor) {
-    font-size: 1.5rem !important;
-  }
-  .cursorWrapper :global(.typed-cursor.smallCursor) {
-    font-size: 0.8rem !important;
+    font-size: 0.7rem;
   }
 }

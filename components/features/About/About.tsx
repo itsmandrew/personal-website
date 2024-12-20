@@ -8,6 +8,7 @@ import styles from "./About.module.css";
 
 export default function About() {
   const el = useRef(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -49,7 +50,8 @@ export default function About() {
       ></div>
 
       <div
-        id="about"
+        ref={aboutRef}
+        data-section="about"
         className="container-fluid d-flex flex-column"
         style={{ minHeight: "100vh" }}
       >

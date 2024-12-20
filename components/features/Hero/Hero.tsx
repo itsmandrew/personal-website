@@ -7,16 +7,27 @@ import Typed from "typed.js";
 export default function Hero() {
   const el = useRef(null);
 
+  const scrollToSection = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    // Get the element's position relative to the viewport
+    const rect = element.getBoundingClientRect();
+
+    // If the element is already mostly in view (within 100px of the top), don't scroll
+    if (Math.abs(rect.top) < 100) return;
+  };
+
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
         `changa17@uci.edu ~$ npm install^1000\ninstalling dependencies...^1000\nFetching from source...^1000\n> Hello, this is Andrew :D \n<span class="${
           styles.navLinks
-        }"><a href="#about" class="purple">about</a>${" ".repeat(
+        }"><a onclick="document.querySelector('[data-section=\\'about\\']').scrollIntoView({behavior: 'smooth'})" class="purple" style="cursor: pointer;">about</a>${" ".repeat(
           window.innerWidth <= 767 ? 2 : 6
-        )}<a href="#experience" class="purple">experience</a>${" ".repeat(
+        )}<a onclick="document.querySelector('[data-section=\\'experience\\']').scrollIntoView({behavior: 'smooth'})" class="purple" style="cursor: pointer;">experience</a>${" ".repeat(
           window.innerWidth <= 767 ? 2 : 6
-        )}<a href="#contact" class="purple">contact</a></span>`,
+        )}<a onclick="document.querySelector('[data-section=\\'contact\\']').scrollIntoView({behavior: 'smooth'})" class="purple" style="cursor: pointer;">contact</a></span>`,
       ],
       typeSpeed: 30,
       backDelay: 750,
@@ -30,6 +41,16 @@ export default function Hero() {
           cursor.textContent = "▏";
           cursor.classList.add(styles.smallCursor);
         }
+
+        // Add click handlers after typing is complete
+        const links = document.querySelectorAll(`.${styles.navLinks} a`);
+        links.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const section = link.textContent;
+            if (section) scrollToSection(section);
+          });
+        });
       },
     });
 

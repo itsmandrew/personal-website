@@ -1,0 +1,106 @@
+.footer {
+  background-color: #929fba !important;
+  padding: 2rem 0 0 !important;
+}
+
+.container {
+  padding: 0 2rem 0 !important;
+}
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  padding: 1rem !important;
+  margin-top: 2rem !important;
+  font-size: 0.9rem !important;
+}
+
+.heading {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+.text {
+  font-size: 0.9rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.socialBtnContainer {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  flex-wrap: wrap !important;
+  margin: 1rem 0 !important;
+}
+
+.socialBtn {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 2px solid white !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+.socialBtn:hover {
+  background-color: white !important;
+  color: black !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: none !important;
+}
+
+.socialBtn:hover i {
+  color: black !important;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white !important;
+}
+
+.socialBtn:focus,
+.socialBtn:active {
+  color: white !important;
+  text-shadow: none !important;
+}
+
+.socialBtn:hover {
+  color: black !important;
+  text-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center !important;
+    padding: 1rem 0 0 !important;
+  }
+
+  .container {
+    padding: 0 1rem !important;
+  }
+
+  .heading {
+    font-size: 0.9rem !important;
+  }
+
+  .text {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .socialBtnContainer {
+    margin: 0.5rem 0 !important;
+    gap: 0.3rem !important;
+  }
+
+  .socialBtn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .copyright {
+    padding: 0.5rem !important;
+    margin-top: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+}
