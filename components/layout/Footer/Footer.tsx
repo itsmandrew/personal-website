@@ -8,31 +8,47 @@ export default function Footer() {
       data-section="contact"
     >
       {/* Grid container */}
-      <div className="container p-4 pb-0">
+      <div className={`container ${styles.container}`}>
         {/* Section: Links */}
         <section className="">
           {/* Grid row */}
-          <div className="row">
+          <div className="row text-center text-md-start">
             {/* Grid column */}
             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 className="text-uppercase mb-4 font-weight-bold">
+              <h6
+                className={`text-uppercase mb-2 mb-md-4 font-weight-bold ${styles.heading}`}
+              >
                 Andrew Chang
               </h6>
-              <p>I sometimes like doing projects and sometimes don&apos;t.</p>
+              <p className={styles.text}>
+                I sometimes like doing projects and sometimes don&apos;t.
+              </p>
             </div>
             {/* Grid column */}
             <hr className="w-100 clearfix d-md-none" />
             {/* Grid column */}
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 className="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <p>Los Angeles, CA 91765, USA</p>
-              <p>changa17@uci.edu</p>
-              <p>+1 (626)-251-8717</p>
+              <h6
+                className={`text-uppercase mb-2 mb-md-4 font-weight-bold ${styles.heading}`}
+              >
+                Contact
+              </h6>
+              <p className={styles.text}>
+                <i className="fas fa-home me-2"></i>Los Angeles, CA 91765, USA
+              </p>
+              <p className={styles.text}>
+                <i className="fas fa-envelope me-2"></i>changa17@uci.edu
+              </p>
+              <p className={styles.text}>
+                <i className="fas fa-phone me-2"></i>+1 (626)-251-8717
+              </p>
             </div>
             {/* Grid column */}
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 className="text-uppercase mb-4 font-weight-bold">
-                Follow us
+              <h6
+                className={`text-uppercase mb-2 mb-md-4 font-weight-bold ${styles.heading}`}
+              >
+                Follow me
               </h6>
               <div className={styles.socialBtnContainer}>
                 {/* LinkedIn Button */}

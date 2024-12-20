@@ -1,9 +1,27 @@
 .footer {
   background-color: #929fba !important;
+  padding: 2rem 0 0 !important;
+}
+
+.container {
+  padding: 0 2rem 0 !important;
 }
 
 .copyright {
   background-color: rgba(0, 0, 0, 0.2) !important;
+  padding: 1rem !important;
+  margin-top: 2rem !important;
+  font-size: 0.9rem !important;
+}
+
+.heading {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+.text {
+  font-size: 0.9rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .socialBtnContainer {
@@ -11,6 +29,8 @@
   justify-content: center !important;
   align-items: center !important;
   gap: 0.5rem !important;
+  flex-wrap: wrap !important;
+  margin: 1rem 0 !important;
 }
 
 .socialBtn {
@@ -47,4 +67,40 @@
 .socialBtn:hover {
   color: black !important;
   text-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center !important;
+    padding: 1rem 0 0 !important;
+  }
+
+  .container {
+    padding: 0 1rem !important;
+  }
+
+  .heading {
+    font-size: 0.9rem !important;
+  }
+
+  .text {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .socialBtnContainer {
+    margin: 0.5rem 0 !important;
+    gap: 0.3rem !important;
+  }
+
+  .socialBtn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .copyright {
+    padding: 0.5rem !important;
+    margin-top: 1rem !important;
+    font-size: 0.8rem !important;
+  }
 }
