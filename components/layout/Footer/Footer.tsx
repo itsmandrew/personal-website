@@ -34,7 +34,7 @@ export default function Footer() {
                 Contact
               </h6>
               <p className={styles.text}>
-                <i className="fas fa-home me-2"></i>Los Angeles, CA 91765, USA
+                <i className="fas fa-home me-2"></i>Los Angeles, CA
               </p>
               <p className={styles.text}>
                 <i className="fas fa-envelope me-2"></i>changa17@uci.edu
