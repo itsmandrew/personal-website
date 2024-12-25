@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import styles from "./Experience.module.css";
 
@@ -9,6 +9,21 @@ export default function Experience() {
   const timelineRef = useRef<HTMLUListElement>(null);
   const el = useRef(null);
   const experienceRef = useRef<HTMLDivElement>(null);
+  const [expandedPoints, setExpandedPoints] = useState<{
+    [key: string]: boolean;
+  }>({});
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -149,6 +164,18 @@ export default function Experience() {
     },
   ];
 
+  const togglePoint = (expIndex: number, pointIndex: number) => {
+    const key = `${expIndex}-${pointIndex}`;
+    setExpandedPoints((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
+  const shouldTruncate = (text: string) => {
+    return isMobile && text.length > 100;
+  };
+
   return (
     <>
       {/* Spacing */}
@@ -162,7 +189,10 @@ export default function Experience() {
         className="container-fluid d-flex flex-column text-center"
         style={{ overflowX: "hidden" }}
       >
-        <p className="display-4 pb-3" style={{ marginBottom: "20px" }}>
+        <p
+          className={`${styles.experienceTitle} display-4 pb-3`}
+          style={{ marginBottom: "5px" }}
+        >
           About my <span ref={el} className="red"></span>
         </p>
       </div>
@@ -195,9 +225,32 @@ export default function Experience() {
                     {exp.company}
                   </p>
                   <ul>
-                    {exp.points.map((point, pointIndex) => (
-                      <li key={pointIndex}>{point}</li>
-                    ))}
+                    {exp.points.map((point, pointIndex) => {
+                      const key = `${index}-${pointIndex}`;
+                      const isExpanded = expandedPoints[key];
+                      const needsTruncation = shouldTruncate(point);
+
+                      return (
+                        <li
+                          className={`${styles.points} ${
+                            needsTruncation && !isExpanded
+                              ? styles.truncated
+                              : ""
+                          }`}
+                          key={pointIndex}
+                        >
+                          <p style={{ margin: 0 }}>{point}</p>
+                          {needsTruncation && (
+                            <div
+                              className={styles.readMore}
+                              onClick={() => togglePoint(index, pointIndex)}
+                            >
+                              {isExpanded ? "Read less" : "Read more"}
+                            </div>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                   <p className={`${styles.date} mb-2 mx-1`}>{exp.date}</p>
                 </div>
