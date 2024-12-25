@@ -11,6 +11,11 @@
   color: rgb(255 255 255 / var(--tw-text-opacity));
   max-width: 100%;
   overflow-x: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.content:hover {
+  transform: scale(1.02);
 }
 
 .content ul {
