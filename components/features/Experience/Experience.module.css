@@ -11,6 +11,11 @@
   color: rgb(255 255 255 / var(--tw-text-opacity));
   max-width: 100%;
   overflow-x: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.content:hover {
+  transform: scale(1.02);
 }
 
 .content ul {
@@ -111,5 +116,37 @@
 
   .timelineIcon {
     left: -41px;
+  }
+
+  .experienceTitle {
+    font-size: 1.8rem !important;
+  }
+
+  .jobTitle {
+    font-size: 1.0rem;
+  } 
+
+  .companyName {
+    font-size: 0.7rem;
+  }
+
+  .points {
+    font-size: 0.7rem !important;
+  }
+
+  .truncated p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .readMore {
+    color: #ff4d4d;
+    font-size: 0.7rem;
+    cursor: pointer;
+    margin-top: 4px;
+    display: inline-block;
   }
 }
