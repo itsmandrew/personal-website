@@ -56,7 +56,10 @@ export default function About() {
         style={{ minHeight: "100vh" }}
       >
         <div className="container-fluid d-flex flex-column text-center">
-          <p className="display-4 pb-3" style={{ marginBottom: "0px" }}>
+          <p
+            className={`display-4 pb-3 ${styles.aboutTitle}`}
+            style={{ marginBottom: "0px" }}
+          >
             About my <span ref={el} className="red"></span>
           </p>
         </div>

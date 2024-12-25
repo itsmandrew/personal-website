@@ -34,7 +34,7 @@
 /* Responsive styles */
 @media (max-width: 767px) {
   .element0 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     white-space: pre-wrap;
     padding: 0 15px;
     width: calc(100% - 30px);
@@ -42,14 +42,15 @@
   }
 
   .navLinks {
-    display: flex;
-    justify-content: space-between;
-    white-space: nowrap;
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: left;
   }
 
   .navLinks a {
     display: inline-block;
-    margin: 0;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .cursorWrapper :global(.typed-cursor) {

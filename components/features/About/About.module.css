@@ -1,45 +1,36 @@
+/* Layout */
 .aboutContainer {
   min-height: 100vh;
-}
-
-.title {
-  margin-bottom: 50px;
-  position: relative;
-  display: inline-block;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   padding: 20px;
   gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
+.container {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+  
+/* Section Halves */
 .half {
   flex: 1;
   width: 50%;
   max-width: 50%;
-  opacity: 0;
-  transition: all 0.8s ease-out;
 }
 
-.leftHalf {
-  transform: translateX(-100%);
-}
-
-.rightHalf {
-  transform: translateX(100%);
-}
-
-.show {
-  opacity: 1 !important;
-  transform: translateX(0) !important;
-}
-
-.profileImage {
+/* Images */
+.profileImage,
+.aboutImage {
   max-width: 400px;
   width: 100%;
   height: auto;
@@ -48,26 +39,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.profileImage:hover {
+.profileImage:hover,
+.aboutImage:hover {
   transform: scale(1.02);
 }
 
-.resumeLink {
-  padding: 10px 20px;
-  font-size: larger;
-  color: #ff001e;
-  border: 2px solid #ff001e;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  margin-top: 2rem;
-}
-
-.resumeLink:hover {
-  background-color: #ff001e;
-  color: white;
-  text-shadow: none;
-}
-
+/* Info Container */
 .infoContainer {
   background-color: rgb(41, 37, 46);
   border-radius: 15px 50px 30px 5px;
@@ -89,7 +66,7 @@
 }
 
 .infoContainer ul {
-  color: white;
+  color: #1eff00;
   list-style-type: disc;
   padding-left: 20px;
   line-height: 1.6;
@@ -99,95 +76,29 @@
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .half {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .aboutImage {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .hidden {
-    transform: translateY(-100%);
-  }
-
-  .hidden2 {
-    transform: translateY(100%);
-  }
-
-  .show {
-    transform: translateY(0);
-  }
-
-  .title {
-    font-size: 1.8rem;
-  }
-
-  .infoContainer h3 {
-    font-size: 1.3rem;
-  }
-
-  .infoContainer ul {
-    font-size: 0.95rem;
-  }
-}
-
-/* About Section Styles */
-.aboutImage {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 25px;
-  transition: transform 0.3s ease;
-}
-
-.aboutImage:hover {
-  transform: scale(1.02);
-}
-
-.half {
-  width: 50%;
-  padding: 20px;
-}
-
-.content {
-  width: 100%;
-  padding: 20px;
-}
-
-.container {
-  margin: 1rem 0;
-  padding: 1.5rem;
-  border-radius: 15px;
-}
-
-.infoContainer {
-  background-color: rgb(41, 37, 46);
-  border-radius: 15px 50px 30px 5px;
-  margin: 1rem 0;
-  padding: 1.5rem;
-}
-
-.infoContainer h3 {
+/* Links */
+.resumeLink {
+  padding: 10px 20px;
+  font-size: larger;
   color: #ff001e;
+  border: 2px solid #ff001e;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
 }
 
-.infoContainer ul {
-  color: #00ff00;
-  list-style-type: disc;
-  padding-left: 20px;
+.resumeLink:hover {
+  background-color: #ff001e;
+  color: white;
+  text-shadow: none;
 }
 
-/* Animation Styles */
+.resumeText:hover {
+  color: #ff001e !important;
+  text-decoration: underline;
+}
+
+/* Animations */
 .hidden,
 .hidden2 {
   opacity: 0;
@@ -209,23 +120,50 @@
   transform: translateX(0);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   .half {
+    flex: none;
     width: 100%;
+    max-width: 100%;
+    padding: 15px;
   }
 
+  .profileImage,
   .aboutImage {
-    max-width: 350px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  /* Keep horizontal transitions even in mobile */
+  .hidden {
+    transform: translateX(-100%);
+  }
+
+  .hidden2 {
+    transform: translateX(100%);
+  }
+
+  .show {
+    transform: translateX(0);
+  }
+
+  .infoContainer h3 {
+    font-size: 1.3rem;
+  }
+
+  .infoContainer ul,
+  .infoContainer p {
+    font-size: 0.8rem;
+  }
+
+  .aboutTitle {
+    font-size: 2rem !important;
   }
 }
 
-@media (max-width: 576px) {
-  .title {
-    font-size: 1.8rem;
-  }
-}
 
-.resumeText:hover {
-  color: #ff001e !important;
-  text-decoration: underline;
-}
