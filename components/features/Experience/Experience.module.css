@@ -11,15 +11,17 @@
   color: rgb(255 255 255 / var(--tw-text-opacity));
   max-width: 100%;
   overflow-x: hidden;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
 
 .content:hover {
   transform: scale(1.02);
+  transition: transform 0.2s;
 }
 
 .content ul {
   list-style-type: disc;
+  list-style-position: outside;
   font-size: small;
   padding-left: 20px;
   margin-bottom: 1em;
@@ -50,7 +52,7 @@
   height: 0; /* Start with 0 height */
   width: 2px;
   background-color: hsl(0, 0%, 90%);
-  transition: height 1.5s ease-out;
+  transition: height 3s ease-out;
 }
 
 .timeline.animate::before {
@@ -140,6 +142,7 @@
     line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    margin-left: 0;  /* Ensure text aligns with bullet point */
   }
 
   .readMore {
