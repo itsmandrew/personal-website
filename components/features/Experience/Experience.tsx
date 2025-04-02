@@ -77,11 +77,14 @@ export default function Experience() {
 
   const experiences = [
     {
-      company: "Tesla, Inc.",
+      company: "Tesla",
       logo: "/logos/tesla-symbol.jpg",
       title: "Software Engineer Intern",
-      date: "January 2025 - Present",
-      points: ["Incoming software and data intern for Winter/Spring 2025"],
+      date: "January 2025 - May 2025",
+      points: [
+        "Designed a Go API to query MS SQL Server datasets and also created a React-based dashboard integrated with Next.js frontend to serve 10,000+ daily requests.",
+        "Deployed a monitoring stack using Prometheus, Grafana, and Kubernetes to observe system and microservice health."
+      ],
     },
     {
       company: "Ingram Micro",
