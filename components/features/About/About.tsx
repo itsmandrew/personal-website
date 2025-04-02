@@ -19,7 +19,7 @@ export default function About() {
       loop: true,
       loopCount: Infinity,
     });
-
+    
     // Animation observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
