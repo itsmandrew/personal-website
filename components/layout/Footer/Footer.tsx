@@ -101,7 +101,7 @@ export default function Footer() {
       </div>
       {/* Copyright */}
       <div className={`text-center p-3 ${styles.copyright}`}>
-        © 2024 Copyright: Andrew Chang
+        © 2025 Copyright: Andrew Chang
       </div>
     </footer>
   );
