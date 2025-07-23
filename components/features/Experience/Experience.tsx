@@ -77,13 +77,23 @@ export default function Experience() {
 
   const experiences = [
     {
+      company: "SoFi",
+      logo: "/logos/sofi-lg.png",
+      title: "Software Engineer Intern",
+      date: "June 2025 - September 2025",
+      points: [
+        "Architected and built an internal monitoring system for 10+ vendor services, reducing service level agreement breaches by 85%, cutting detection time by 60%, and avoiding over $700K in downtime-related costs",
+        "Designed a real-time dashboard to visualize vendor uptime and service health, serving 40+ engineers across multiple teams and reducing manual investigation time by 50%",
+      ],
+    },
+    {
       company: "Tesla",
       logo: "/logos/tesla-symbol.jpg",
       title: "Software Engineer Intern",
       date: "January 2025 - May 2025",
       points: [
-        "Designed a Go API to query MS SQL Server datasets and also created a React-based dashboard integrated with Next.js frontend to serve 10,000+ daily requests.",
-        "Deployed a monitoring stack using Prometheus, Grafana, and Kubernetes to observe system and microservice health."
+        "Delivered a real-time data streaming system for granular assembly line metrics, reducing defects and cycle time, resulting in over $2M+ in annual cost savings for the Megapack production line",
+        "Built and deployed 10+ internal APIs to streamline access to production and telemetry data, reducing data retrieval time by 70% and enabling 30+ engineers to build and debug systems more efficiently",
       ],
     },
     {
@@ -92,8 +102,8 @@ export default function Experience() {
       title: "Software Engineer Intern",
       date: "June 2024 - December 2024",
       points: [
-        "Designed and implemented an ETL pipeline using Apache Airflow and Python to push on-premise data from PostgreSQL to a GCP cloud bucket, which then triggers a Cloud Function to load the data into BigQuery, reducing data transfer latency by 30% and improving overall data processing efficiency by 25%.",
-        "Employed LangChain with models such as GPT-4o-mini and Gemini 1.5 Flash for summarization, data cleaning, and response generation on external documentation, utilizing Google Vertex AI and OpenAI to enhance data quality, streamline information processing, and improve automated response accuracy.",
+        "Instrumented backend services to expose key performance metrics, improving visibility into latency, error rates, and throughput, and reducing incident detection time by 50%",
+        "Implemented a centralized logging pipeline to aggregate logs across 5+ microservices, reducing log search latency by 70% and accelerating root cause analysis for engineering and support teams",
       ],
     },
     {
@@ -127,16 +137,6 @@ export default function Experience() {
       ],
     },
     {
-      company: "UC Irvine",
-      logo: "/logos/uci-main.png",
-      title: "Lab Assistant: ICS 46",
-      date: "March 2023 - June 2023",
-      points: [
-        "Assigned exercises on Github and graded weekly homework assignments for UC Irvine's ICS 46: Data Structure Implementation and Analysis",
-        "Oversaw open lab hours three times weekly to help debug course projects and implement data structure concepts such as DAG graphs, hash maps, and AVL trees resulting in a 95% positive anonymous student-tutor feedback",
-      ],
-    },
-    {
       company: "WhizKids Computer Center",
       logo: "/logos/whiz.png",
       title: "Programming Instructor",
@@ -144,15 +144,6 @@ export default function Experience() {
       points: [
         "Lectured classes of 3-5 students in topics including Python, Java, front-end web development, PyGame, data structures and algorithms, and machine learning",
         "Motivated student interest in computer science through personally developed take home projects such as weather forecasting, quiz/studying, and type racing based web-apps shown by a returning student rate of 90%",
-      ],
-    },
-    {
-      company: "UC Irvine",
-      logo: "/logos/uci-main.png",
-      title: "Lab Assistant: ICS 32A",
-      date: "September 2021 - December 2021",
-      points: [
-        "Provided open lab hours three times a week for two hours, each lab to debug course projects and implement Python and programming concepts such as recursion, classes, web API's, networks/sockets, and Tkinter",
       ],
     },
     {
