@@ -121,11 +121,36 @@ a:active {
 }
 
 /* Animation Section For Sliding */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: translateX(0);
+  }
+}
+
 .hidden,
 .hidden2 {
   opacity: 0;
   filter: blur(5px);
-  transition: opacity 1s, filter 1s, transform 1s;
 }
 
 .hidden {
@@ -136,9 +161,19 @@ a:active {
   transform: translateX(100%);
 }
 
+.hidden.show {
+  animation: slideInFromLeft 2s forwards;
+  transition: transform 0.2s ease;
+}
+
+.hidden2.show {
+  animation: slideInFromRight 2s forwards;
+  transition: transform 0.2s ease;
+}
+
 .show {
   opacity: 1;
-  filter: blur(0);
+  filter: none;
   transform: translateX(0);
 }
 

@@ -44,11 +44,11 @@ export default function Footer() {
               </p>
             </div>
             {/* Grid column */}
-            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <div className={`col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 ${styles.followMeSection}`}>
               <h6
-                className={`text-uppercase mb-2 mb-md-4 font-weight-bold ${styles.heading}`}
+                className={`text-uppercase mb-0 font-weight-bold ${styles.heading}`}
               >
-                Follow me
+                Social Medias
               </h6>
               <div className={styles.socialBtnContainer}>
                 {/* LinkedIn Button */}

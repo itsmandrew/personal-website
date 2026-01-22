@@ -25,8 +25,8 @@ export default function Experience() {
   useElementObserver(timelineRef, styles.animate, 0.1);
 
   useIntersectionObserver({
-    selectors: [".hidden2"],
-    showClass: "show",
+    selectors: [`.${styles.hidden2}`],
+    showClass: styles.show,
   });
 
   const togglePoint = (expIndex: number, pointIndex: number) => {
@@ -74,16 +74,17 @@ export default function Experience() {
                     className={styles.logoImage}
                   />
                 </span>
-                <div
-                  className={`${styles.content} ${styles.contentBox} container py-2 rounded hidden2`}
-                >
-                  <h5 className={`${styles.jobTitle} mb-0 mt-1`}>
-                    {exp.title}
-                  </h5>
-                  <p className={`${styles.companyName} mb-3 mt-2`}>
-                    {exp.company}
-                  </p>
-                  <ul>
+                <div className={styles.hidden2}>
+                  <div
+                    className={`${styles.content} ${styles.contentBox} container py-2 rounded`}
+                  >
+                    <h5 className={`${styles.jobTitle} mb-0 mt-1`}>
+                      {exp.title}
+                    </h5>
+                    <p className={`${styles.companyName} mb-3 mt-2`}>
+                      {exp.company}
+                    </p>
+                    <ul>
                     {exp.points.map((point, pointIndex) => {
                       const key = `${index}-${pointIndex}`;
                       const isExpanded = expandedPoints[key];
@@ -110,8 +111,9 @@ export default function Experience() {
                         </li>
                       );
                     })}
-                  </ul>
-                  <p className={`${styles.date} mb-2 mx-1`}>{exp.date}</p>
+                    </ul>
+                    <p className={`${styles.date} mb-2 mx-1`}>{exp.date}</p>
+                  </div>
                 </div>
               </li>
             ))}

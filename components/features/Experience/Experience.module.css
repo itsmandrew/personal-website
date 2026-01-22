@@ -13,10 +13,6 @@
   overflow-x: hidden;
 }
 
-.content:hover {
-  transform: scale(1.02);
-}
-
 .content ul {
   list-style: none;
   font-size: small;
@@ -97,6 +93,69 @@
 
 .contentBox {
   background-color: rgb(41, 37, 46);
+  border-radius: 15px;
+  transition: transform 0.2s ease !important;
+}
+
+.contentBox:hover {
+  transform: scale(1.02) !important;
+}
+
+/* Animations - copied from About */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: translateX(0);
+  }
+}
+
+.hidden,
+.hidden2 {
+  opacity: 0;
+  filter: blur(5px);
+}
+
+.hidden {
+  transform: translateX(-100%);
+}
+
+.hidden2 {
+  transform: translateX(100%);
+}
+
+.hidden.show {
+  animation: slideInFromLeft 2s forwards;
+  transition: transform 0.2s ease;
+}
+
+.hidden2.show {
+  animation: slideInFromRight 2s forwards;
+  transition: transform 0.2s ease;
+}
+
+.show {
+  opacity: 1;
+  filter: none;
+  transform: translateX(0);
 }
 
 /* Text colors */
