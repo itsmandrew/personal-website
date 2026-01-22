@@ -93,9 +93,15 @@
     margin-bottom: 0.3rem !important;
   }
 
+  .followMeSection {
+    align-items: center !important;
+  }
+
   .socialBtnContainer {
     margin: 0.5rem 0 !important;
     gap: 0.3rem !important;
+    justify-content: center !important;
+    grid-template-columns: repeat(4, auto) !important;
   }
 
   .socialBtn {
