@@ -76,24 +76,18 @@
   margin-bottom: 0.5rem;
 }
 
-/* Links */
+/* Resume */
+.resumeContainer {
+  padding: 3vh 0;
+}
+
 .resumeLink {
-  padding: 10px 20px;
-  font-size: larger;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #ff001e;
-  border: 2px solid #ff001e;
-  border-radius: 8px;
   transition: all 0.3s ease;
-  margin-top: 2rem;
 }
 
 .resumeLink:hover {
-  background-color: #ff001e;
-  color: white;
-  text-shadow: none;
-}
-
-.resumeText:hover {
   color: #ff001e !important;
   text-decoration: underline;
 }

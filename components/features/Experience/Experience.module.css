@@ -11,12 +11,10 @@
   color: rgb(255 255 255 / var(--tw-text-opacity));
   max-width: 100%;
   overflow-x: hidden;
-  transition: transform 0.8s ease-in-out;
 }
 
 .content:hover {
   transform: scale(1.02);
-  transition: transform 0.2s;
 }
 
 .content ul {
@@ -89,6 +87,16 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+}
+
+.logoImage {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid gainsboro;
+}
+
+.contentBox {
+  background-color: rgb(41, 37, 46);
 }
 
 /* Text colors */

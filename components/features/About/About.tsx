@@ -1,45 +1,19 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import Typed from "typed.js";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./About.module.css";
+import { useTypedAnimation, useIntersectionObserver } from "@/hooks";
 
 export default function About() {
-  const el = useRef(null);
-  const aboutRef = useRef<HTMLDivElement>(null);
+  const el = useTypedAnimation({
+    strings: ["life", "skills", "hobbies"],
+  });
 
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["life", "skills", "hobbies"],
-      typeSpeed: 80,
-      backSpeed: 80,
-      backDelay: 750,
-      loop: true,
-      loopCount: Infinity,
-    });
-    
-    // Animation observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(styles.show);
-        }
-      });
-    });
-
-    // Observe all sliding elements
-    const slidingElements = document.querySelectorAll(
-      `.${styles.hidden}, .${styles.hidden2}`
-    );
-    slidingElements.forEach((el) => observer.observe(el));
-
-    return () => {
-      typed.destroy();
-      observer.disconnect();
-    };
-  }, []);
+  useIntersectionObserver({
+    selectors: [`.${styles.hidden}`, `.${styles.hidden2}`],
+    showClass: styles.show,
+  });
 
   return (
     <>
@@ -50,7 +24,6 @@ export default function About() {
       ></div>
 
       <div
-        ref={aboutRef}
         data-section="about"
         className="container-fluid d-flex flex-column"
         style={{ minHeight: "100vh" }}
@@ -78,17 +51,10 @@ export default function About() {
               alt="me being hella sexy"
               priority
             />
-            <div
-              className="d-flex flex-row align-items-center justify-content-center"
-              style={{ padding: "3vh 0" }}
-            >
+            <div className={`d-flex flex-row align-items-center justify-content-center ${styles.resumeContainer}`}>
               <Link
                 href="/static/resume.pdf"
-                style={{
-                  fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
-                  color: "#ff001e",
-                }}
-                className={styles.resumeText}
+                className={styles.resumeLink}
               >
                 this is my resume btw
               </Link>

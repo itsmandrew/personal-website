@@ -1,3 +1,8 @@
+/* Container */
+.heroContainer {
+  min-height: 100vh;
+}
+
 /* Base styles */
 .element0 {
   line-height: 1.5;

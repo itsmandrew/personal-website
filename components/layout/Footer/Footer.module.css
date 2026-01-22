@@ -25,11 +25,10 @@
 }
 
 .socialBtnContainer {
-  display: flex !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, auto) !important;
   justify-content: center !important;
-  align-items: center !important;
   gap: 0.5rem !important;
-  flex-wrap: wrap !important;
   margin: 1rem 0 !important;
 }
 
