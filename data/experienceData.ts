@@ -13,18 +13,20 @@ export const experiences: Experience[] = [
     title: "Software Engineer Intern",
     date: "June 2025 - September 2025",
     points: [
-      "Architected and built an internal monitoring system for 10+ vendor services, reducing service level agreement breaches by 85%, cutting detection time by 60%, and avoiding over $700K in downtime-related costs",
-      "Designed a real-time dashboard to visualize vendor uptime and service health, serving 40+ engineers across multiple teams and reducing manual investigation time by 50%",
+      "Developed a production-grade monitoring system for external vendors in Go (FX framework) with PostgreSQL, deployed on AWS EC2 via Kubernetes and Argo CD, cutting detection time by 60% and preventing $100K+ in downtime costs",
+      "Designed and configured dynamic Datadog dashboards to visualize latency, error rates, and SLA breaches, enabling 30+ engineers to pinpoint faulty integrations quickly and reducing manual log investigation by 50%",
+      "Instrumented multiple RESTful endpoints with the OpenTelemetry SDK, adding context propagation and trace/span attribution across services, increasing observability coverage by 40%",
     ],
   },
   {
     company: "Tesla",
     logo: "/logos/tesla-symbol.jpg",
     title: "Software Engineer Intern",
-    date: "January 2025 - May 2025",
+    date: "December 2024 - May 2025",
     points: [
-      "Delivered a real-time data streaming system for granular assembly line metrics, reducing defects and cycle time, resulting in over $2M+ in annual cost savings for the Megapack production line",
-      "Built and deployed 10+ internal APIs to streamline access to production and telemetry data, reducing data retrieval time by 70% and enabling 30+ engineers to build and debug systems more efficiently",
+      "Led the full-stack development of a factory analytics dashboard using React/TypeScript and Go, reducing Megapack production-line defects by 25% and savings over $500,000 annually in scrap and downtime costs",
+      "Engineered Go REST APIs and backend logic to collect, validate, and stream Megapack factory metrics into Prometheus and Kafka, enabling event-driven monitoring across multiple production lines",
+      "Architected a multi-section analytics UI, managing complex component state, conditional rendering paths, and data-dependent panels with React Hook Form and React Query for synchronization with factory metrics APIs",
     ],
   },
   {
@@ -33,8 +35,8 @@ export const experiences: Experience[] = [
     title: "Software Engineer Intern",
     date: "June 2024 - December 2024",
     points: [
-      "Instrumented backend services to expose key performance metrics, improving visibility into latency, error rates, and throughput, and reducing incident detection time by 50%",
-      "Implemented a centralized logging pipeline to aggregate logs across 5+ microservices, reducing log search latency by 70% and accelerating root cause analysis for engineering and support teams",
+      "Integrated 5+ new data sources into Elasticsearch using Java and Spring Boot within the Kraken platform, increasing indexed product coverage by 40% and improving search reliability for 1000+ daily users",
+      "Deployed and maintained Elasticsearch pipelines, implementing automated testing with JUnit and Mockito along with validation scripts to ensure data consistency, reduce indexing errors, and improve production search reliability",
     ],
   },
   {
@@ -48,13 +50,13 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    company: "Spurs Sports & Entertainment (NBA)",
+    company: "San Antonio Spurs",
     logo: "/logos/spurs.jpeg",
-    title: "Software Engineer Intern",
-    date: "October 2023 - May 2024",
+    title: "Data Engineer Intern",
+    date: "September 2023 - May 2024",
     points: [
-      "Transitioned key data pipelines and CI/CD workflows from Jenkins to Airflow, incorporating Docker for consistent execution environments and utilizing Airflow's dynamic DAGs (Directed Acyclic Graphs) and advanced scheduling for enhanced workflow management",
-      "Collaborated with frontend teams to develop and test API integration, ensuring seamless communication between FastAPI endpoints and React-based applications, resulting in a 15% increase in user interaction efficiency",
+      "Built and maintained 10+ ETL pipelines using Python and Apache Airflow to extract, transform, and load customer marketing data from external APIs into AWS Redshift, improving data freshness and increasing processing speed by 200%",
+      "Served 10+ API endpoints supporting 5+ engineers, improving access to customer marketing data and accelerating development of internal dashboards and analytics pipelines",
     ],
   },
   {
