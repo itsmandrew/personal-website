@@ -83,7 +83,7 @@ export default function About() {
               <h3>Tech Stack</h3>
               <ul>
                 <li>
-                  <strong>Languages</strong>: Python, TypeScript, Java, Rust,
+                  <strong>Languages</strong>: Python, Go, TypeScript, Java, Rust,
                   HTML/CSS, SQL
                 </li>
                 <li>
